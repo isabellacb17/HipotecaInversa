@@ -1,29 +1,27 @@
-Calculadora Hipoteca Inversa
+# Calculadora Hipoteca Inversa
+
 Este proyecto implementa un simulador de hipoteca inversa con arquitectura cliente-servidor. Incluye un backend en Flask (Python), un frontend en HTML/JS/CSS, y se puede ejecutar fácilmente con Docker Compose.
 
-Autores
+## Autores
+
 Proyecto desarrollado como simulador de hipoteca inversa, integrando conceptos de finanzas, programación y despliegue con contenedores.
 
-Integrantes
-Sebastián Tamayo
+### Integrantes
 
-Isabella Ceballos
+- Sebastián Tamayo
+- Isabella Ceballos
+- Sofia Correa
 
-Sofia Correa
+## Tecnologías utilizadas
 
-Tecnologías utilizadas
-Backend: Python 3, Flask
-
-Frontend: HTML, CSS, JavaScript
-
-Base de datos: SQL (scripts incluidos)
-
-Contenedores: Docker y Docker Compose
-
+- **Backend:** Python 3, Flask
+- **Frontend:** HTML, CSS, JavaScript
+- **Base de datos:** SQL (scripts incluidos)
+- **Contenedores:** Docker y Docker Compose
 
 ## Estructura del proyecto
 
-
+```
 HipotecaInversa/
 │── docker-compose.yml          # Orquestación con Docker
 │
@@ -44,80 +42,76 @@ HipotecaInversa/
 │   └── Dockerfile
 │
 └── ReverseMortgageSimulatorOriginal/  # Versión anterior del simulador
-
-
+```
 
 ## Instalación y ejecución
 
 ### Opción 1: Con Docker
 
 1. Clonar este repositorio:
-
-   bash
+   ```bash
    git clone https://github.com/SebastianT454/HipotecaInversa.git
    cd HipotecaInversa
-   
+   ```
+
 2. Levantar los servicios:
-
-   bash
+   ```bash
    docker-compose up --build
-   
-3. Acceder a la app en:
+   ```
 
-   
+3. Acceder a la app en:
+   ```
    http://localhost:8080
-   
+   ```
 
 ### Opción 2: Manual (sin Docker)
 
 1. Instalar dependencias del backend:
-
-   bash
+   ```bash
    cd backend
    pip install -r requirements.txt
    python src/app.py
-   
-2. Abrir el frontend desde frontend/index.html.
+   ```
 
-
+2. Abrir el frontend desde `frontend/index.html`.
 
 ## Pruebas
 
 Ejecutar las pruebas del backend con:
 
-bash
+```bash
 cd backend
 pytest tests/
+```
 
+## Pipelines CI/CD Implementados
 
-Pipelines CI/CD Implementados
-Pipeline Común para Frontend y Backend:
-Build - Compilación de la aplicación
+### Pipeline Común para Frontend y Backend:
 
-Unit Tests - Ejecución de pruebas automatizadas
+- **Build** - Compilación de la aplicación
+- **Unit Tests** - Ejecución de pruebas automatizadas
+- **Docker Build** - Generación de imagen Docker
+- **Docker Push** - Publicación en Docker Hub
 
-Docker Build - Generación de imagen Docker
+### Configuración:
 
-Docker Push - Publicación en Docker Hub
+- **Jenkinsfile:** Pipeline como código en cada repositorio
+- **Trigger automático** en push a ramas main/develop
+- **Credenciales seguras** para Docker Hub
 
-Configuración:
-Jenkinsfile: Pipeline como código en cada repositorio
+## Imágenes Docker Publicadas 
 
-Trigger automático en push a ramas main/develop
+### Frontend
 
-Credenciales seguras para Docker Hub
-
-##Imágenes Docker Publicadas 🐳
-
-Frontend
-bash
+```bash
 docker pull sofiac14/reverse-mortgage-frontend:latest
 docker pull sofiac14/reverse-mortgage-frontend:final
-Backend
-bash
+```
+
+### Backend
+
+```bash
 docker pull sofiac14/reverse-mortgage-backend:latest
 docker pull sofiac14/reverse-mortgage-backend:final
-
-
-
+```
 
