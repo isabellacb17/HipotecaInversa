@@ -14,12 +14,16 @@ Proyecto desarrollado como simulador de hipoteca inversa, integrando conceptos d
 - Isabella Ceballos
 - Sofia Correa
 
+---
+
 ## Tecnologías utilizadas
 
 - **Backend:** Python 3, Flask
 - **Frontend:** HTML, CSS, JavaScript
 - **Base de datos:** SQL (scripts incluidos)
 - **Contenedores:** Docker y Docker Compose
+
+---
 
 ## Estructura del proyecto
 
@@ -46,36 +50,44 @@ HipotecaInversa/
 └── ReverseMortgageSimulatorOriginal/  # Versión anterior del simulador
 ```
 
+---
+
 ## Instalación y ejecución
 
 ### Opción 1: Con Docker
 
-1. Clonar este repositorio:
-   ```bash
-   git clone https://github.com/SebastianT454/HipotecaInversa.git
-   cd HipotecaInversa
-   ```
+1. **Clonar este repositorio:**
 
-2. Levantar los servicios:
-   ```bash
-   docker-compose up --build
-   ```
+```bash
+git clone https://github.com/SebastianT454/HipotecaInversa.git
+cd HipotecaInversa
+```
 
-3. Acceder a la app en:
-   ```
-   http://localhost:8080
-   ```
+2. **Levantar los servicios:**
+
+```bash
+docker-compose up --build
+```
+
+3. **Acceder a la app en:**
+
+```
+http://localhost:8080
+```
 
 ### Opción 2: Manual (sin Docker)
 
-1. Instalar dependencias del backend:
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   python src/app.py
-   ```
+1. **Instalar dependencias del backend:**
 
-2. Abrir el frontend desde `frontend/index.html`.
+```bash
+cd backend
+pip install -r requirements.txt
+python src/app.py
+```
+
+2. **Abrir el frontend** desde `frontend/index.html`
+
+---
 
 ## Pruebas
 
@@ -85,6 +97,8 @@ Ejecutar las pruebas del backend con:
 cd backend
 pytest tests/
 ```
+
+---
 
 ## Pipelines CI/CD Implementados
 
@@ -100,6 +114,8 @@ pytest tests/
 - **Jenkinsfile:** Pipeline como código en cada repositorio
 - **Trigger automático** en push a ramas main/develop
 - **Credenciales seguras** para Docker Hub
+
+---
 
 ## Imágenes Docker Publicadas
 
@@ -119,6 +135,10 @@ docker pull sofiac14/reverse-mortgage-backend:final
 
 ---
 
-**Licencia:** Este proyecto es de código abierto y está disponible bajo los términos de la licencia que especifiques.
+## Licencia
 
-**Contacto:** Para más información, contacta a los autores del proyecto.
+Este proyecto es de código abierto y está disponible bajo los términos de la licencia MIT.
+
+## Contacto
+
+Para más información, contacta a los autores del proyecto.
