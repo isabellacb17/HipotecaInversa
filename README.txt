@@ -2,6 +2,8 @@
 
 Este proyecto implementa un simulador de hipoteca inversa con arquitectura cliente-servidor. Incluye un backend en Flask (Python), un frontend en HTML/JS/CSS, y se puede ejecutar fácilmente con Docker Compose.
 
+---
+
 ## Autores
 
 Proyecto desarrollado como simulador de hipoteca inversa, integrando conceptos de finanzas, programación y despliegue con contenedores.
@@ -99,7 +101,7 @@ pytest tests/
 - **Trigger automático** en push a ramas main/develop
 - **Credenciales seguras** para Docker Hub
 
-## Imágenes Docker Publicadas 
+## Imágenes Docker Publicadas
 
 ### Frontend
 
@@ -115,3 +117,8 @@ docker pull sofiac14/reverse-mortgage-backend:latest
 docker pull sofiac14/reverse-mortgage-backend:final
 ```
 
+---
+
+**Licencia:** Este proyecto es de código abierto y está disponible bajo los términos de la licencia que especifiques.
+
+**Contacto:** Para más información, contacta a los autores del proyecto.
