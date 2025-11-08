@@ -74,7 +74,7 @@ pipeline {
     post {
         success {
             echo '¡Pipeline ejecutado exitosamente!'
-            echo 'Para entrega: muestra capturas + imágenes construidas + push manual'
+            
         }
     }
 }
