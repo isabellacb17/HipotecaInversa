@@ -1,24 +1,24 @@
-# Calculadora Hipoteca Inversa
+Calculadora Hipoteca Inversa
+Este proyecto implementa un simulador de hipoteca inversa con arquitectura cliente-servidor. Incluye un backend en Flask (Python), un frontend en HTML/JS/CSS, y se puede ejecutar fácilmente con Docker Compose.
 
-Este proyecto implementa un *simulador de hipoteca inversa* con arquitectura cliente-servidor. Incluye un *backend en Flask (Python), un **frontend en HTML/JS/CSS, y se puede ejecutar fácilmente con **Docker Compose*.
+Autores
+Proyecto desarrollado como simulador de hipoteca inversa, integrando conceptos de finanzas, programación y despliegue con contenedores.
 
+Integrantes
+Sebastián Tamayo
 
-## Autores
+Isabella Ceballos
 
-Proyecto desarrollado como simulador de *hipoteca inversa*, integrando conceptos de finanzas, programación y despliegue con contenedores.
+Sofia Correa
 
-## Integrantes
--Sebastián Tamayo.
--Isabella Ceballos.
--Sofia Correa.
+Tecnologías utilizadas
+Backend: Python 3, Flask
 
-## Tecnologías utilizadas
+Frontend: HTML, CSS, JavaScript
 
-* *Backend*: Python 3, Flask
-* *Frontend*: HTML, CSS, JavaScript
-* *Base de datos*: SQL (scripts incluidos)
-* *Contenedores*: Docker y Docker Compose
+Base de datos: SQL (scripts incluidos)
 
+Contenedores: Docker y Docker Compose
 
 
 ## Estructura del proyecto
@@ -89,6 +89,33 @@ bash
 cd backend
 pytest tests/
 
+
+Pipelines CI/CD Implementados
+Pipeline Común para Frontend y Backend:
+Build - Compilación de la aplicación
+
+Unit Tests - Ejecución de pruebas automatizadas
+
+Docker Build - Generación de imagen Docker
+
+Docker Push - Publicación en Docker Hub
+
+Configuración:
+Jenkinsfile: Pipeline como código en cada repositorio
+
+Trigger automático en push a ramas main/develop
+
+Credenciales seguras para Docker Hub
+
+Imágenes Docker Publicadas 🐳
+Frontend
+bash
+docker pull sofiac14/reverse-mortgage-frontend:latest
+docker pull sofiac14/reverse-mortgage-frontend:final
+Backend
+bash
+docker pull sofiac14/reverse-mortgage-backend:latest
+docker pull sofiac14/reverse-mortgage-backend:final
 
 
 
