@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'docker:latest'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
+    }
     
     environment {
         BACKEND_IMAGE_NAME = 'sofiac14/reverse-mortgage-backend'
@@ -26,10 +31,7 @@ pipeline {
         
         stage('Verify Images') {
             steps {
-                sh """
-                    echo "Imagenes construidas:"
-                    docker images | grep sofiac14
-                """
+                sh 'docker images | grep sofiac14'
             }
         }
     }
