@@ -92,7 +92,7 @@ pipeline {
     post {
         always {
             echo 'Pipeline finalizado.'
-            sh 'docker system prune -f || true'
+           
         }
         success {
             echo '¡Éxito! Imágenes en DockerHub'
